@@ -15,6 +15,13 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="assets/tplanner-mark.svg" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/portrait-960.webp"
+      imagesrcset="assets/portrait-480.webp 480w, assets/portrait-960.webp 960w"
+      imagesizes="(max-width: 900px) 360px, 460px"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -50,7 +57,22 @@
           </div>
         </div>
         <figure class="hero-portrait" aria-label="Portrait of Teminijesu Olaleye">
-           <img src="assets/portrait.jpeg" alt="Teminijesu Olaleye portrait" />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="assets/portrait-480.webp 480w, assets/portrait-960.webp 960w"
+              sizes="(max-width: 900px) 360px, 460px"
+            />
+            <img
+              src="assets/portrait-960.jpg"
+              alt="Teminijesu Olaleye portrait"
+              width="960"
+              height="1280"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
         </figure>
       </section>
 
