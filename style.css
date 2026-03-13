@@ -173,19 +173,55 @@ h1 {
 }
 
 .hero-portrait {
+  width: 100%;
+  max-width: 460px;
   margin: 0;
   position: relative;
+  margin-inline: auto;
+}
+
+.hero-portrait picture {
+  display: block;
+}
+
+.hero-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: center / cover no-repeat url("assets/portrait-blur.webp");
+  filter: blur(26px) saturate(1.02);
+  transform: scale(1.06);
+  opacity: 1;
+  transition: opacity 0.45s ease;
+  -webkit-mask-image: radial-gradient(
+    ellipse 74% 88% at 50% 34%,
+    black 44%,
+    rgba(0, 0, 0, 0.88) 62%,
+    rgba(0, 0, 0, 0.38) 74%,
+    transparent 84%
+  );
+  mask-image: radial-gradient(
+    ellipse 74% 88% at 50% 34%,
+    black 44%,
+    rgba(0, 0, 0, 0.88) 62%,
+    rgba(0, 0, 0, 0.38) 74%,
+    transparent 84%
+  );
 }
 
 .hero-portrait img {
   width: 100%;
-  max-width: 460px;
   display: block;
   margin-inline: auto;
   border: none;
   border-radius: 0;
   box-shadow: none;
   background: var(--bg);
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.45s ease;
   /* Fade all edges into the exact page background color */
   -webkit-mask-image: radial-gradient(
     ellipse 74% 88% at 50% 34%,
@@ -201,6 +237,14 @@ h1 {
     rgba(0, 0, 0, 0.38) 74%,
     transparent 84%
   );
+}
+
+.hero-portrait.is-loaded::before {
+  opacity: 0;
+}
+
+.hero-portrait.is-loaded img {
+  opacity: 1;
 }
 
 .btn {
@@ -328,9 +372,6 @@ footer {
 
   .hero-portrait {
     order: -1;
-  }
-
-  .hero-portrait img {
     max-width: 360px;
   }
 }
