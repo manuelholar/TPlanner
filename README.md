@@ -1,37 +1,22 @@
-# Teminijesu Olaleye Portfolio Website
+# TPlanner Portfolio Website
 
-Single-page portfolio website for a strategic wedding planner.
+Single-page portfolio website for Teminijesu Olaleye, strategic wedding planner.
 
 ## Local Files
 
 - `index.html`
 - `style.css`
 - `script.js`
+- `assets/teminijesu-portrait.png`
+- `assets/tplanner-mark.svg`
 
-## Publish To GitHub Pages (Free Hosting)
+## Live Site
 
-1. Create a new public repository on GitHub named `weddingsite`.
-2. In terminal, run:
+- `https://manuelholar.github.io/TPlanner/`
 
-```bash
-cd /home/ubuntu/weddingsite
-git remote add origin https://github.com/<your-github-username>/weddingsite.git
-git push -u origin main
-```
+## Deployment Notes
 
-3. On GitHub, open your repo and go to:
+This project is deployed with GitHub Pages from:
 
-- `Settings` -> `Pages`
-- Under `Build and deployment`:
-  - `Source`: `Deploy from a branch`
-  - `Branch`: `main`
-  - `Folder`: `/ (root)`
-- Click `Save`
-
-4. Your live site URL will be:
-
-```text
-https://<your-github-username>.github.io/weddingsite/
-```
-
-GitHub Pages may take 1-3 minutes for first deployment.
+- Branch: `main`
+- Folder: `/ (root)`

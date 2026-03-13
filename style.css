@@ -1,12 +1,13 @@
 :root {
-  --bg: #f8f2e8;
-  --bg-soft: #fefaf4;
-  --ink: #1f1b17;
-  --muted: #64584f;
-  --accent: #bc5f3f;
-  --accent-deep: #8c3f28;
-  --card: rgba(255, 252, 246, 0.8);
-  --line: rgba(31, 27, 23, 0.12);
+  --bg: #07090e;
+  --bg-soft: #101523;
+  --ink: #f2efe7;
+  --muted: #c5c0b5;
+  --accent: #e8a860;
+  --accent-deep: #a8633d;
+  --card: rgba(16, 21, 35, 0.72);
+  --line: rgba(242, 239, 231, 0.17);
+  --glass: rgba(12, 16, 26, 0.6);
 }
 
 * {
@@ -24,9 +25,9 @@ body {
   font-family: "Manrope", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 20% 20%, rgba(188, 95, 63, 0.18), transparent 42%),
-    radial-gradient(circle at 82% 10%, rgba(112, 77, 52, 0.16), transparent 34%),
-    linear-gradient(150deg, var(--bg), var(--bg-soft));
+    radial-gradient(circle at 20% 20%, rgba(232, 168, 96, 0.23), transparent 38%),
+    radial-gradient(circle at 78% 11%, rgba(103, 83, 204, 0.25), transparent 35%),
+    linear-gradient(165deg, var(--bg), var(--bg-soft));
   line-height: 1.65;
   overflow-x: hidden;
 }
@@ -35,8 +36,8 @@ body {
   position: fixed;
   z-index: -1;
   border-radius: 50%;
-  filter: blur(30px);
-  opacity: 0.38;
+  filter: blur(28px);
+  opacity: 0.45;
 }
 
 .ambient-shape-left {
@@ -44,7 +45,7 @@ body {
   height: 250px;
   left: -80px;
   top: 14%;
-  background: #de9c84;
+  background: #d3965c;
   animation: drift 11s ease-in-out infinite;
 }
 
@@ -53,7 +54,7 @@ body {
   height: 320px;
   right: -100px;
   bottom: 8%;
-  background: #b8a186;
+  background: #5f5bd6;
   animation: drift 14s ease-in-out infinite reverse;
 }
 
@@ -63,15 +64,15 @@ body {
     transform: translateY(0) translateX(0);
   }
   50% {
-    transform: translateY(-18px) translateX(12px);
+    transform: translateY(-16px) translateX(12px);
   }
 }
 
 .site-header {
   position: sticky;
   top: 0;
-  backdrop-filter: blur(7px);
-  background: rgba(248, 242, 232, 0.72);
+  backdrop-filter: blur(9px);
+  background: rgba(7, 9, 14, 0.62);
   border-bottom: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
@@ -84,8 +85,17 @@ body {
   font-family: "Fraunces", serif;
   text-decoration: none;
   color: var(--ink);
-  font-size: 1.4rem;
-  letter-spacing: 0.06em;
+  font-size: 1.25rem;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand img {
+  width: 38px;
+  height: 38px;
+  display: block;
 }
 
 nav {
@@ -118,13 +128,17 @@ nav a:hover::after {
 }
 
 main {
-  width: min(1024px, 90vw);
+  width: min(1080px, 90vw);
   margin: 0 auto;
-  padding: 3.5rem 0 4rem;
+  padding: 3.2rem 0 4rem;
 }
 
 .hero {
-  padding: 4rem 0 3rem;
+  padding: 3rem 0 2.4rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
 }
 
 .kicker {
@@ -149,7 +163,7 @@ h1 {
 }
 
 .hero-text {
-  width: min(700px, 100%);
+  width: min(650px, 100%);
   color: var(--muted);
   font-size: 1.08rem;
 }
@@ -159,6 +173,35 @@ h1 {
   gap: 0.8rem;
   flex-wrap: wrap;
   margin-top: 1.4rem;
+}
+
+.hero-portrait {
+  margin: 0;
+  position: relative;
+}
+
+.hero-portrait img {
+  width: 100%;
+  max-width: 430px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.42);
+  display: block;
+  margin-inline: auto;
+}
+
+.hero-portrait::after {
+  content: "TPlanner";
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  background: rgba(7, 9, 14, 0.68);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.07em;
 }
 
 .btn {
@@ -175,15 +218,15 @@ h1 {
 }
 
 .btn-primary {
-  color: #fff;
+  color: #0e1016;
   background: linear-gradient(120deg, var(--accent), var(--accent-deep));
-  box-shadow: 0 10px 20px rgba(140, 63, 40, 0.2);
+  box-shadow: 0 10px 20px rgba(168, 99, 61, 0.3);
 }
 
 .btn-ghost {
   color: var(--ink);
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .panel {
@@ -192,6 +235,7 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 22px;
   padding: 1.5rem 1.35rem;
+  backdrop-filter: blur(8px);
 }
 
 .panel h2 {
@@ -209,7 +253,7 @@ h1 {
 }
 
 .card {
-  background: #fffdf8;
+  background: var(--glass);
   border-radius: 16px;
   border: 1px solid var(--line);
   padding: 1rem;
@@ -229,12 +273,12 @@ h1 {
   padding: 0.95rem;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: #fffdf8;
+  background: var(--glass);
 }
 
 .timeline span {
   font-weight: 700;
-  color: var(--accent-deep);
+  color: var(--accent);
 }
 
 .about p,
@@ -278,6 +322,20 @@ footer {
   }
 }
 
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-portrait {
+    order: -1;
+  }
+
+  .hero-portrait img {
+    max-width: 360px;
+  }
+}
+
 @media (max-width: 760px) {
   nav {
     gap: 0.65rem;
@@ -298,6 +356,10 @@ footer {
   }
 
   .hero {
-    padding-top: 2.4rem;
+    padding-top: 2.2rem;
+  }
+
+  .brand span {
+    display: none;
   }
 }

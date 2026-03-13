@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Strategic wedding planning portfolio for Teminijesu Olaleye."
+      content="TPlanner strategic wedding planning portfolio for Teminijesu Olaleye."
     />
-    <title>Teminijesu Olaleye | Strategic Wedding Planner</title>
+    <title>TPlanner | Teminijesu Olaleye</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/svg+xml" href="assets/tplanner-mark.svg" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -21,7 +22,10 @@
     <div class="ambient-shape ambient-shape-right"></div>
 
     <header class="site-header">
-      <a class="brand" href="#top">TO</a>
+      <a class="brand" href="#top" aria-label="TPlanner home">
+        <img src="assets/tplanner-mark.svg" alt="TPlanner logo" />
+        <span>TPlanner</span>
+      </a>
       <nav>
         <a href="#services">Services</a>
         <a href="#approach">Approach</a>
@@ -32,17 +36,22 @@
 
     <main id="top">
       <section class="hero reveal">
-        <p class="kicker">Strategic Wedding Planner</p>
-        <h1>Teminijesu Olaleye</h1>
-        <p class="hero-text">
-          I design calm, intentional wedding experiences with clear planning systems,
-          elegant timelines, and practical strategy so you can feel fully present on
-          your celebration day.
-        </p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="mailto:olaleyeteminijesu@gmail.com">Book a Consultation</a>
-          <a class="btn btn-ghost" href="#services">Explore Services</a>
+        <div class="hero-copy">
+          <p class="kicker">Strategic Wedding Planner</p>
+          <h1>Teminijesu Olaleye</h1>
+          <p class="hero-text">
+            I build calm, precision-led wedding experiences through clear planning
+            strategy, elegant operations, and thoughtful execution that protects
+            your joy from proposal to final dance.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="mailto:olaleyeteminijesu@gmail.com">Book a Consultation</a>
+            <a class="btn btn-ghost" href="#services">Explore Services</a>
+          </div>
         </div>
+        <figure class="hero-portrait" aria-label="Portrait of Teminijesu Olaleye">
+          <img src="assets/teminijesu-portrait.png" alt="Teminijesu Olaleye portrait" />
+        </figure>
       </section>
 
       <section id="services" class="panel reveal">
@@ -99,23 +108,23 @@
       </section>
 
       <section id="about" class="panel reveal about">
-        <h2>About</h2>
+        <h2>About TPlanner</h2>
         <p>
-          As a strategic wedding planner, I combine creative direction with operations
-          thinking. My process protects your vision, your time, and your peace of mind,
-          so your celebration feels as beautiful behind the scenes as it does in every photo.
+          TPlanner merges creative direction with operations thinking. Every workflow
+          is designed so your celebration looks beautiful and feels effortless, both
+          in front of your guests and behind the scenes.
         </p>
       </section>
 
       <section id="contact" class="panel contact reveal">
-        <h2>Let us plan your wedding with confidence.</h2>
-        <p>Tell me your date, city, and vision, and I will craft the right planning roadmap.</p>
+        <h2>Plan your wedding with strategic confidence.</h2>
+        <p>Tell me your date, city, and vision, and I will craft your planning roadmap.</p>
         <a class="btn btn-primary" href="mailto:olaleyeteminijesu@gmail.com">olaleyeteminijesu@gmail.com</a>
       </section>
     </main>
 
     <footer>
-      <p>© <span id="year"></span> Teminijesu Olaleye. Strategic Wedding Planner.</p>
+      <p>© 2025 TPlanner. Teminijesu Olaleye, Strategic Wedding Planner.</p>
     </footer>
 
     <script src="script.js"></script>

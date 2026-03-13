@@ -1,1 +1,1 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+// Intentionally minimal script file kept for future interactions.
